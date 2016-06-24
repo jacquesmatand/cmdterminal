@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+
+<html style="overflow-x: hidden">
+<head>
+	<title>  Les commandes Terminal </title>
+	<meta charset="utf8" lang="fr">
+
+	<link type="text/css" rel="stylesheet" href="style.css" media="screen and (min-width: 380px ) and (max-width: 1400px)"/>
+
+</head>
+
+<body>
+
+	<header class="top-description">   
+
+		<div class="content-wrapper"> 
+			<div class="container">  <img src="clavier.jpg" />
+				<h1 class="nomsite">  Les COMMANDES DU TERMINAL </h1>
+			
+				<div> 
+					<ul > 
+						<li class="social"> <em> Google + </em> </li>
+						<li class="social"> <em>  Facebook </em> </li>
+						<li class="social"> Twitter </li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div> </br>  
+
+		<div class="container">  
+			<div> 
+
+				<ul class="nav"> 
+					<li class="nav"> <a href="#accueil"> LS et CD </a></li>
+					
+					<li class="nav"> <a href="#apropos"> RM et MKDIR</a></li>
+
+					<li class="nav"> <a href="#blog"> Chown et Chmod </a></li>
+
+
+				 </ul>
+			</div>
+		</div> </br>  
+		
+	</header>
+	<section>  
+
+		
+
+		<div class="container">  <h3 id="accueil"> LS et CD </h3>
+
+
+					<p><strong> La commande ls permet d'afficher le contenu d'un répertoire.</strong></br> <!-- Ici je mets les titres majuscule pour une meilleure lisibilité -->
+						ls -l : Afficher les informations de manière détaillée.</br>
+						ls -a : Afficher les fichiers cachés.</br>
+						ls -h : Afficher la taille des fichiers de facon lisible.</br>
+						ls -r : Tri inversé.</br>
+						ls -t : Trier les fichiers par date du plus récent au plus ancien.</br>
+						ls -S : Trier par taille décroissante.</br>
+						ls -la: Afficher tous les fichiers y compris les fichiers cachés.</br>
+						ls -lhS:Afficher les informations des fichiers, avec des tailles lisibles le tout ordonné du plus grand au plus petit.</br></p>
+						
+						<p><strong> Navigeur d’un répertoire à un autre s’effectue avec la commande cd, sans oublier un espace suivi et l'endroit où on veut se trouver.</strong></br> <!-- Encore un titre en gras au lieu d'utiliser les balises h -->
+						cd / Permet de se retrouver à la racine du disque. </br>
+						cd ~ ou cd Accéder directement au répertoire de l’utilisateur.</br>
+						cd /var/www/ Aller dans le répertoire /var/www.</br>
+						cd .. Remonter dans le répertoire parent à partir de là où vous êtes.</br>
+						cd - Permet de revenir au répertoire précédent. </br>
+						pwd Renvoyer le chemin absolu du répertoire courant ce qui est utile puisqu’en général le shell n’affiche que le nom du répertoire courant.</br>
+
+						</p> 
+					</br> 
+			 </div>
+				  
+	 	<div class="container"> <h3 id="apropos"> RM et MKDIR </h3> <!-- J'ai créé des ancres pour les paragraphes en début. -->
+
+			 <p>  
+		<strong>  Pour créer une copie d’un fichier, on utilise la commande cp.</strong></br> 
+					cp foo/bar.txt baz/ Copier le fichier bar.txt dans le répertoire baz.</br>
+					cp -r foo/ baz/ Copier des répertoires entiers (note : si baz existe, la cible sera baz/foo/).</br>
+					<code> mv :</code>
+					Déplacer un fichier est aussi simple que de le copier, pour cela il faut utiliser la commande mv. </br>Cette commande permet aussi de renommer vos fichiers.</br>
+					mv foo/bar.txt baz/ Déplacer le fichier bar.txt dans le répertoire baz.</br>
+					mv foo_bar.txt foo_baz.txt Renommer le fichier foo_bar.txt en foo_baz.txt.</br>
+					<code> rm :</code>
+					Pour effacer un fichier ou un répertoire on utilise la commande rm. </br>
+					rm *.txt Supprimer tous les fichiers ayant pour extension txt. </br>
+					rm foo.txt bar.txt Supprimer les fichiers foo.txt et bar.txt. </br>
+					rm -rf baz/ Supprimer le répertoire baz et tout son contenu.</br>
+					
+					<strong> Pour créer un répertoire il suffit d’utiliser la commande <code> mkdir</code>. </strong></br>Celle-ci vous permettra de créer un répertoire à l’emplacement où vous êtes ou l’emplacement précisé en argument de la commande.</br>
+					mkdir -v Retourner des informations lors de la création d'un répertoire.</br>
+					mkdir -p Cette option permet de créer une arborescence complète.</br>
+					mkdir foo Créer le répertoire foo. </br>
+					mkdir -v foo /tmp/bar Créer les répertoires foo et /tmp/bar. </br>
+					mkdir -p foo/bar/baz Créer l’arborescence foo/bar/baz. </br>
+					
+			</p>
+
+	 	</div>
+
+	 	<div class="container"> <h3 id="blog"> Chown et Chmod </h3>
+
+	 			<p>  <code>  Chown :</code>
+					La commande chown permet de changer le propriétaire d'un fichier ou d'un répertoire.
+					chown bob:admin foo.txt Attribuer l’utilisateur bob et le groupe admin au fichier foo.txt.</br>
+					<code>  Chmod :</code>
+					La commande chmod permet de changer les droits d'un fichier ou d'un répertoire. Pour exécuter cette commande vous devez être le propriétaire du fichier ou être logué en root.</br>
+					chmod u+w fichier Ajouter les droits d'écriture au propriétaire (user, write)</br>
+					chmod g+r fichier Ajouter les droits de lecture au groupe du fichier (group, read)</br>
+					chmod o-x fichier Supprimer les droits d'exécution aux autres utilisateurs (other, execution)</br>
+					chmod a+rw dossier Ajouter les droits de lecture / écriture à tous (all)</br>
+					chmod -R a+rx files Ajouter les droits de lecture et d'exécution à tout ce que contient le repertoire dossier.</br>
+					chmod 764 dossier Tous les droits pour le propriétaire (7xx), lecture et ecriture pour le groupe (x6x) et lecture uniquement pour les autres (xx4).</br>
+					chmod -R 755 dossier Donner au propriétaire tous les droits (7xx), alors que seuls les droits de lecture et d'accès seront donnés aux autres (x55). Grace à l'option -R ces droits seront appliqués à tous les fichiers et dossiers contenus dans ce répertoire.</br>
+				</p>
+	 	</div>
+						
+	
+	</section>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,98 @@
+
+@media screen and (min-width: 380px) {
+	.container{
+					width: 1070px; 
+					margin: 0 auto; 
+					/* Cette div, limite donc ma zone de travail. */
+			}
+	div .content-wrapper{ max-width: 100%; 
+						  float: left; 
+						  margin-bottom: 30px; }/* Je m'étends sur toute la page et toute la largeur. */
+
+	header .top-description{ max-width: 100%; 
+							 height: 30px; 
+							 float: left; 
+							 background-color: #800; } /* Dans cette partie, je mets tout ce qui touche 
+							 au haut de la page, dans une div  */
+
+	img {
+		height: 150px; 
+		width: 150px; 
+		border: 5px solid #aaa; 
+		float: left;
+		margin-bottom: 60px; 
+		/* Image en une pour avoir un peu de beauté sur la page.*/
+		} 
+
+	h1 {text-align: center; 
+		font-size: 30px;
+		background-color: #888; 
+		padding: 40px; 
+		width: 800px;
+		z-index: -1;} /* Par rapport à l'ordre des éléments, ce titre passe après pour laisser
+		la place à l'affichage des réseaux sociaux */
+
+	ul .social{ list-style-type: none;
+				display: inline-block;
+				background-color: #888;
+				border: 2px transparent ; 
+				margin-right: 10px;
+				float: right;
+				border-radius: 10px;
+				width: 80px;
+				margin-top: 20px;
+				text-align: center;
+				z-index: 9; /* une liste dont je cache les puces avec une bordure transparente.*/
+	}
+
+	.social:hover {background-color: red;} /* Effet de changement de couleur en 
+	arrière plan */
+		
+		
+
+
+	 
+	/*tr:nth-child(even){/* even paire */
+		background-color: #a00;
+	/*}
+	tr:nth-child(odd){/* odd impaire 
+		background-color:#ccc; 
+
+
+	} */
+	ul .nav{list-style-type: none;
+		 display: inline-block;
+		 border: transparent;
+		 /*background-color:#c78;*/
+		 margin-top: 300px;
+		 float: right;}
+
+	li{ display: inline-block;
+     		background-color: #c78;
+		    margin-right: 30px;
+		    margin-left: 20px;
+		    padding: 5px 10px 5px 10px;
+		    text-align: center;
+		    border-radius: 10px;}
+
+
+	li:hover{background-color: green;} /* un effet pour qu'au passage sur le lien, il change de couleur
+	en arrière plan*/ 
+
+code{
+	font-size: 26px;
+	font-family: Arial;
+	color: #008;
+
+}
+
+	
+	
+
+
+}   /*
+
+@media screen and (min-width: 200px){
+	.top { display: none;}
+}  ceci est un mediaquery que j'ai abandonné pour y revenir plus tard ou dans le cadre d'un autre projet */
+
